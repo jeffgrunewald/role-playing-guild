@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "user.json",
+  "title": "User",
+  "description": "A user account in the role-playing guild system",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUIDv4 identifier for the user"
+    },
+    "username": {
+      "type": "string",
+      "description": "Unique username for login"
+    },
+    "password_hash": {
+      "type": "string",
+      "description": "Hashed password (never exposed to clients)"
+    },
+    "admin": {
+      "type": "boolean",
+      "description": "Whether the user has admin privileges"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the user was created"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the user was last updated"
+    }
+  },
+  "required": ["id", "username", "password_hash", "admin", "created_at", "updated_at"]
+}

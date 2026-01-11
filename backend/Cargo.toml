@@ -1,0 +1,25 @@
+[profile.release]
+debug = true
+codegen-units = 1
+lto = true
+
+[package]
+name = "role-playing-guild"
+version = "0.1.0"
+edition = "2024"
+publish = false
+resolver = "2"
+
+[dependencies]
+anyhow = "1"
+axum = { version = "0.8", features = ["macros", "query"] }
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4", features = ["derive"] }
+config = { version = "0.15", default-features = false, features = ["toml"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sqlx = { version = "0.8", features = ["chrono", "runtime-tokio", "sqlite", "uuid"] }
+tokio = { version = "1", default-features = false, features = ["rt-multi-thread", "signal"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+uuid = { version = "1", features = ["serde", "v4"] }
