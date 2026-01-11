@@ -1,3 +1,7 @@
+| name | purpose |
+|------|---------|
+| create-schema | create a repeatable skill for adding new schemas |
+
 # Create Schema Skill
 
 Creates a new application schema with proper documentation and database migration.
