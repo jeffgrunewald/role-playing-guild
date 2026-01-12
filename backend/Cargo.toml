@@ -16,10 +16,12 @@ axum = { version = "0.8", features = ["macros", "query"] }
 chrono = { version = "0.4", features = ["serde"] }
 clap = { version = "4", features = ["derive"] }
 config = { version = "0.15", default-features = false, features = ["toml"] }
+jwt-simple = { version = "0.12", default-features = false, features = ["pure-rust"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 sqlx = { version = "0.8", features = ["chrono", "runtime-tokio", "sqlite", "uuid"] }
 tokio = { version = "1", default-features = false, features = ["rt-multi-thread", "signal"] }
 tracing = "0.1"
-tracing-subscriber = "0.3"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "registry", "fmt"] }
+triggered = "0.1"
 uuid = { version = "1", features = ["serde", "v4"] }

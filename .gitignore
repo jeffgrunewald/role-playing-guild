@@ -1,1 +1,3 @@
 backend/target
+database.db
+jwt_signing_key.bin

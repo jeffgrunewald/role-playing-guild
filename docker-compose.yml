@@ -1,0 +1,16 @@
+services:
+  role-playing-guild:
+    image: role-playing-guild:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      RPG__LOG: role_playing_guild=info
+      RPG__DB_PATH: /opt/role-play-guild/etc/database.db
+      RPG__DB_MAX_CONNECTIONS: 10
+      RPG__JWT_KEY_PATH: /opt/role-play-guild/etc/jwt_signing_key.bin
+    volumes:
+      - ./database.db:/opt/role-playing-guild/etc/database.db
+      - ./jwt_signing_key.bin:/opt/role-playing-guild/etc/jwt_signing_key.bin
