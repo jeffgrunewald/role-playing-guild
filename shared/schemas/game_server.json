@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "game_server.json",
+  "title": "GameServer",
+  "description": "A game server in the role-playing guild system",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUIDv4 identifier for the game server"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the game server"
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the game server"
+    },
+    "join_code": {
+      "type": "string",
+      "description": "Code used to join the game server"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the game server was created"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the game server was last updated"
+    }
+  },
+  "required": ["id", "name", "version", "join_code", "created_at", "updated_at"]
+}
